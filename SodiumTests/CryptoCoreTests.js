@@ -501,9 +501,9 @@ export default class Test extends BasicTest
             }
         ];
 
-        Promise.all((() => {
+        Promise.all(sample_crypto_core_ed25519_random.map(t => {
             return Sodium.crypto_core_ed25519_random()
-                .then(q => q.length === 32)
+                .then(q => Base64.toByteArray(q).length === 32)
                 .catch(e => {
                     throw e
                 })
