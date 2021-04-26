@@ -10,10 +10,10 @@ class TestResult extends Component {
     const text = (this.props.value == null) ? "?" :(this.props.value ? "Pass":"Fail")
     const style = {color:(this.props.value == null ? "black" : (this.props.value ? "green":"red"))}
     return (
-      <View style={styles.testContainer}>
-        <Text style={styles.testLabel}>{this.props.name}:</Text>
-        <Text style={[styles.testResult,style]}>{text}</Text>
-      </View>
+        <View style={styles.testContainer}>
+          <Text style={styles.testLabel}>{this.props.name}:</Text>
+          <Text style={[styles.testResult,style]}>{text}</Text>
+        </View>
     )
   }
 
@@ -32,7 +32,7 @@ export class BasicTest extends Component {
       testNames.forEach(tName => {
         const t = tests.find(t => t.name == tName)
         if (!t)
-         tests.push({name:tName,value:null,error:null})
+          tests.push({name:tName,value:null,error:null})
         else {
           t.value = null
           t.error = null
@@ -71,12 +71,12 @@ export class BasicTest extends Component {
   render() {
     const {tests} = this.state
     return (
-      <ScrollView style={{flex:1}}>
-        {tests.map((t) => <TestResult key={t.name} name={t.name} value={t.value}/>)}
-        <View style={{paddingTop:30}}>
-          {tests.filter(t => !!t.error).map((t) => <Text key={t.name} style={styles.testError}>{`${t.name} -> ${t.error.message}`}</Text>)}
-        </View>
-      </ScrollView>
+        <ScrollView style={{flex:1}}>
+          {tests.map((t) => <TestResult key={t.name} name={t.name} value={t.value}/>)}
+          <View style={{paddingTop:30}}>
+            {tests.filter(t => !!t.error).map((t) => <Text key={t.name} style={styles.testError}>{`${t.name} -> ${t.error.message}`}</Text>)}
+          </View>
+        </ScrollView>
     )
   }
 

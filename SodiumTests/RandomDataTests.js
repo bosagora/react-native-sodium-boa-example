@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-import {ScrollView, Text, View} from 'react-native'
+import React from 'react'
 
 import Base64 from 'base64-js'
-import Sodium from 'react-native-sodium'
+import Sodium from 'react-native-sodium-boa'
 
 import {BasicTest} from './BasicTest'
 
