@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native'
-import Sodium from 'react-native-sodium'
+import Sodium from 'react-native-sodium-boa'
 
 import { styles } from './styles'
 import RandomDataTests from './SodiumTests/RandomDataTests'
