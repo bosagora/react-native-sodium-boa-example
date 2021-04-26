@@ -8,6 +8,10 @@ import SecretKeyCryptographyTests from './SodiumTests/SecretKeyCryptographyTests
 import PublicKeyCryptographyTests from './SodiumTests/PublicKeyCryptographyTests'
 import PasswordHashingTests from './SodiumTests/PasswordHashingTests'
 import AdvancedTests from './SodiumTests/AdvancedTests'
+import CryptoCoreTests from './SodiumTests/CryptoCoreTests'
+import CryptoScalarmultTests from './SodiumTests/CryptoScalarmultTests'
+import CryptoGenerichashTests from './SodiumTests/CryptoGenerichashTests'
+import CryptoXchacha20poly1305Tests from './SodiumTests/CryptoXchacha20poly1305Tests'
 
 export default function YourApp() {
 
@@ -33,6 +37,10 @@ export default function YourApp() {
                 <Button onPress={() => setSelectedTest(3)} title="Public-key cryptography"/>
                 <Button onPress={() => setSelectedTest(4)} title="Password Hashing"/>
                 <Button onPress={() => setSelectedTest(5)} title="Advanced"/>
+                <Button onPress={() => setSelectedTest(6)} title="Crypto core"/>
+                <Button onPress={() => setSelectedTest(7)} title="Crypto scalarmult"/>
+                <Button onPress={() => setSelectedTest(8)} title="Crypto generichash"/>
+                <Button onPress={() => setSelectedTest(9)} title="Crypto Xchacha20"/>
             </View>
             }
             <View style={{flex:1}}>
@@ -41,7 +49,10 @@ export default function YourApp() {
                 {selectedTest == 3 && <PublicKeyCryptographyTests/> }
                 {selectedTest == 4 && <PasswordHashingTests/> }
                 {selectedTest == 5 && <AdvancedTests/> }
-
+                {selectedTest == 6 && <CryptoCoreTests/> }
+                {selectedTest == 7 && <CryptoScalarmultTests/> }
+                {selectedTest == 8 && <CryptoGenerichashTests/> }
+                {selectedTest == 9 && <CryptoXchacha20poly1305Tests/> }
             </View>
             {selectedTest != 0 &&
             <View>
