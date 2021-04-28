@@ -1,5 +1,7 @@
+// @ts-ignore
 import React, { useEffect, useState } from "react"
 import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native'
+// @ts-ignore
 import Sodium from 'react-native-sodium-boa'
 
 import { styles } from './styles'
@@ -12,8 +14,12 @@ import CryptoCoreTests from './SodiumTests/CryptoCoreTests'
 import CryptoScalarmultTests from './SodiumTests/CryptoScalarmultTests'
 import CryptoGenerichashTests from './SodiumTests/CryptoGenerichashTests'
 import CryptoXchacha20poly1305Tests from './SodiumTests/CryptoXchacha20poly1305Tests'
+import CryptoCoreSyncTests from './SodiumTests/CryptoCoreSyncTests'
+import CryptoScalarmultSyncTests from './SodiumTests/CryptoScalarmultSyncTests'
+import CryptoGenerichashSyncTests from './SodiumTests/CryptoGenerichashSyncTests'
+import CryptoXchacha20poly1305SyncTests from './SodiumTests/CryptoXchacha20poly1305SyncTests'
 
-export default function YourApp() {
+export default function App() {
 
     const [sodiumVersion, setSodiumVersion] = useState("")
     const [selectedTest, setSelectedTest] = useState(0)
@@ -41,6 +47,10 @@ export default function YourApp() {
                 <Button onPress={() => setSelectedTest(7)} title="Crypto scalarmult"/>
                 <Button onPress={() => setSelectedTest(8)} title="Crypto generichash"/>
                 <Button onPress={() => setSelectedTest(9)} title="Crypto Xchacha20"/>
+                <Button onPress={() => setSelectedTest(11)} title="Crypto core Sync"/>
+                <Button onPress={() => setSelectedTest(12)} title="Crypto scalarmult Sync"/>
+                <Button onPress={() => setSelectedTest(13)} title="Crypto generichash Sync"/>
+                <Button onPress={() => setSelectedTest(14)} title="Crypto Xchacha20 Sync"/>
             </View>
             }
             <View style={{flex:1}}>
@@ -53,6 +63,10 @@ export default function YourApp() {
                 {selectedTest == 7 && <CryptoScalarmultTests/> }
                 {selectedTest == 8 && <CryptoGenerichashTests/> }
                 {selectedTest == 9 && <CryptoXchacha20poly1305Tests/> }
+                {selectedTest == 11 && <CryptoCoreSyncTests/> }
+                {selectedTest == 12 && <CryptoScalarmultSyncTests/> }
+                {selectedTest == 13 && <CryptoGenerichashSyncTests/> }
+                {selectedTest == 14 && <CryptoXchacha20poly1305SyncTests/> }
             </View>
             {selectedTest != 0 &&
             <View>
