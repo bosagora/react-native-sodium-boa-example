@@ -1,5 +1,5 @@
 // @ts-ignore
-import Sodium from 'react-native-sodium-boa'
+import Sodium from 'react-native-sodium-boa';
 import * as Base64 from 'base64-js';
 
 export interface ISodiumBridgeResult

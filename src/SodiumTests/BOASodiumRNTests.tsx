@@ -1,12 +1,10 @@
 // @ts-ignore
 import { BOASodiumRN } from '../modules/crypto/BOASodiumRN';
 import {BasicTest} from './BasicTest';
-import Sodium from "react-native-sodium-boa";
-import Base64 from "base64-js";
 
 export default class Test extends BasicTest
 {
-    constructor(props) {
+    constructor(props:any) {
         super(props);
     }
 
