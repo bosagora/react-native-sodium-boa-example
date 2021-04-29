@@ -19,6 +19,7 @@ import CryptoScalarmultSyncTests from './SodiumTests/CryptoScalarmultSyncTests'
 import CryptoGenerichashSyncTests from './SodiumTests/CryptoGenerichashSyncTests'
 import CryptoXchacha20poly1305SyncTests from './SodiumTests/CryptoXchacha20poly1305SyncTests'
 import BOASodiumRNTests from './SodiumTests/BOASodiumRNTests'
+import BOASDKTests from './SodiumTests/BOASDKTests';
 
 export default function App() {
 
@@ -27,8 +28,11 @@ export default function App() {
 
     useEffect(() => {
         Sodium.sodium_version_string()
-            .then((version) => setSodiumVersion(version))
-            .catch((error) => this._handleError(error))
+            .then((version: string) => setSodiumVersion(version))
+            .catch((error: any) => {
+                // @ts-ignore
+                this._handleError(error);
+            })
     },[])
 
     return (
@@ -54,6 +58,7 @@ export default function App() {
                 <Button onPress={() => setSelectedTest(13)} title="Crypto generichash Sync"/>
                 <Button onPress={() => setSelectedTest(14)} title="Crypto Xchacha20 Sync"/>
                 <Button onPress={() => setSelectedTest(15)} title="BOASodiumRN"/>
+                <Button onPress={() => setSelectedTest(16)} title="BOA-SDK-TS"/>
             </View>
             }
             <View style={{flex:1}}>
@@ -71,6 +76,7 @@ export default function App() {
                 {selectedTest == 13 && <CryptoGenerichashSyncTests/> }
                 {selectedTest == 14 && <CryptoXchacha20poly1305SyncTests/> }
                 {selectedTest == 15 && <BOASodiumRNTests/> }
+                {selectedTest == 16 && <BOASDKTests/> }
             </View>
             {selectedTest != 0 &&
             <View>

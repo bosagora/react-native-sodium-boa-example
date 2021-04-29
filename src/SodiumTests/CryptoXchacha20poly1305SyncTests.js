@@ -175,7 +175,7 @@ export default class Test extends BasicTest
             }
         ];
 
-        let results: Array;
+        let results;
         results = sample_crypto_aead_xchacha20.map(t => {
             let q = Sodium.crypto_aead_xchacha20poly1305_ietf_encrypt_sync(
                 Base64.fromByteArray(this.hex2bin(t.message)),
