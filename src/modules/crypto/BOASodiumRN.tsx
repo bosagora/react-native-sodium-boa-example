@@ -36,6 +36,9 @@ export class BOASodiumRN
 
     public crypto_core_ed25519_from_uniform (r: Uint8Array): Uint8Array
     {
+        if (r.length !== this.crypto_core_ed25519_BYTES)
+            throw new Error("Invalid input size");
+
         let in_r = Base64.fromByteArray(r);
         let result: ISodiumBridgeResult
             = JSON.parse(Sodium.crypto_core_ed25519_from_uniform_sync(in_r));
