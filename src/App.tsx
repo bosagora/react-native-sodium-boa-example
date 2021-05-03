@@ -52,7 +52,6 @@ export default function App() {
                 <Button onPress={() => setSelectedTest(7)} title="Crypto scalarmult"/>
                 <Button onPress={() => setSelectedTest(8)} title="Crypto generichash"/>
                 <Button onPress={() => setSelectedTest(9)} title="Crypto Xchacha20"/>
-                <Button onPress={() => setSelectedTest(10)} title="Crypto core - BOASodiumRN"/>
                 <Button onPress={() => setSelectedTest(11)} title="Crypto core Sync"/>
                 <Button onPress={() => setSelectedTest(12)} title="Crypto scalarmult Sync"/>
                 <Button onPress={() => setSelectedTest(13)} title="Crypto generichash Sync"/>
