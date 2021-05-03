@@ -6311,10 +6311,10 @@ react-native-randombytes@^3.6.1:
     buffer "^4.9.1"
     sjcl "^1.0.3"
 
-react-native-sodium-boa@^0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/react-native-sodium-boa/-/react-native-sodium-boa-0.0.20.tgz#36b1d2a6c832376e141c09afd627b8ceda494b7f"
-  integrity sha512-FCHu5upZ1cIkhv62Sgu4uWh8LmKWPFiFxdvWLsfRg2tNBYludD/1tKc1wRehV1VqGpG0aC01g1dTN7HrtvuH7A==
+react-native-sodium-boa@^0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/react-native-sodium-boa/-/react-native-sodium-boa-0.0.21.tgz#9ddbb6bebbecd27454602cf0416f3b5e37d9470e"
+  integrity sha512-+r2PShXS/OQpOLCakRVmoRwUY62uC4oiJ2oRpwe4gjxJyYQv6BwR1wbOkXZ48bRT3fJi0PA8N7mzkOwqPdU7jQ==
 
 react-native-tcp@^3.3.2:
   version "3.3.2"
