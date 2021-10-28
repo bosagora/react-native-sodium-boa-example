@@ -20,6 +20,9 @@ import CryptoGenerichashSyncTests from './SodiumTests/CryptoGenerichashSyncTests
 import CryptoXchacha20poly1305SyncTests from './SodiumTests/CryptoXchacha20poly1305SyncTests'
 import BOASodiumRNTests from './SodiumTests/BOASodiumRNTests'
 import BOASDKTests from './SodiumTests/BOASDKTests';
+import AppLinkTests1 from './SodiumTests/AppLinkTests1';
+import AppLinkTests2 from './SodiumTests/AppLinkTests2';
+import AppLinkTests3 from './SodiumTests/AppLinkTests3';
 
 export default function App() {
 
@@ -43,6 +46,9 @@ export default function App() {
             </View>
             {selectedTest == 0 &&
             <View>
+                <Button onPress={() => setSelectedTest(17)} title="App Link Test1"/>
+                <Button onPress={() => setSelectedTest(18)} title="App Link Test2"/>
+                <Button onPress={() => setSelectedTest(19)} title="App Link Test3"/>
                 <Button onPress={() => setSelectedTest(1)} title="Random data generation"/>
                 <Button onPress={() => setSelectedTest(2)} title="Secret-key cryptography"/>
                 <Button onPress={() => setSelectedTest(3)} title="Public-key cryptography"/>
@@ -61,6 +67,9 @@ export default function App() {
             </View>
             }
             <View style={{flex:1}}>
+                {selectedTest == 17 && <AppLinkTests1/> }
+                {selectedTest == 18 && <AppLinkTests2/> }
+                {selectedTest == 19 && <AppLinkTests3/> }
                 {selectedTest == 1 && <RandomDataTests/> }
                 {selectedTest == 2 && <SecretKeyCryptographyTests/> }
                 {selectedTest == 3 && <PublicKeyCryptographyTests/> }
